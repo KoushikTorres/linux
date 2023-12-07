@@ -1,0 +1,27 @@
+  1. Ls - list all items in linux
+	2. Ls -ltr - list all items in linux in details
+	3. Mkdir - to create folders 
+	Syntax - mkdir <folder name >
+	4. Nano - nano is the editor using which you can edit files you can write and save
+		Syntax - nano <file name >
+	5. PWD - present working directory 
+		Syntax - pwd 
+	6. Touch - to make files 
+		Syntax - touch <file name >
+	7. Cat - to see the contents of the files
+		Syntax- cat<file name>
+	8. History - to see all commands used 
+		Syntax - history
+	9. Vi - vi is a editor you can edit files
+		Syntax - vi <filename>
+	10. Vim - this is also an editor
+		Syntax - vim<filename>
+	11. Clear - to clean the interface
+		Syntax - clear
+	12. MV - To move files 
+		Syntax - mv <file name > ~/<directory>
+-------------
+  13. uname -a   ( system information)
+  14. cat /etc/os-release ( os related information)
+  15. ps -ef (check running applications)
+  16. 
