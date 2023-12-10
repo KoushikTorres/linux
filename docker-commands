@@ -1,0 +1,80 @@
+$ docker -v  --> version
+$ docker version ---> lists engine and docker version
+------------  ---------------------
+$ docker system -help
+  Commands:
+  df          Show docker disk usage
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+$ docker system df
+  TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          3         2         236.5MB   236.5MB (100%)
+Containers      2         0         2.603kB   2.603kB (100%)
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+---------------------------------
+$ docker stats ---> shows realtime usage
+  CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O         PIDS
+aa0d4d256d32   clever_einstein   0.00%     7.766MiB / 949.7MiB   0.82%     1.18kB / 0B   7.73MB / 8.19kB   57
+------------------------------------
+
+$ docker search koushiktorres   ---> shows published images by koushiktorres
+  NAME                        DESCRIPTION                      STARS     OFFICIAL   AUTOMATED
+koushiktorres/capstone-1                                     0                    
+koushiktorres/dockerimage                                    0                    
+koushiktorres/capstone-2                                     0                    
+koushiktorres/nodeapp                                        0                    
+koushiktorres/edgeimg       edgehtml template with apache2   0
+
+$ docker search capstone-1 ---> shows images with same name published by different authors.
+  NAME                          DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+aroon4docker/capstone-1                                                       0                    
+sarahlyne46/capstone-1711                                                     0                    
+cmcelvogue/capstone-1                                                         0                    
+koushiktorres/capstone-1                                                      0                    
+kushalsrihari/capstone-1.0                                                    0      
+
+$ docker pull httpd   ----> pull images from registry
+$ docker images ----> list images
+$ docker create image-name ----> creates container but not runs
+$ docker run image-name ----> creates and runs the container
+  $docker run --name koushik alpine  ---> runs the container in name of koushik with alpine image in foreground
+  $docker run -d --name koushik nginx --> runs the container in detached mode
+  
+  $docker run -itd --name koushik alpine /bin/bash ---> when running an os image (ubuntu) use interactive-tty-detached mode using bash shell in koushik container
+  -itd ( installs cli and makes container usefull to use and error free)
+  
+$ docker exec -it koushik /bin/bash   ---> login to the container named koushik in interactive-tty mode and use bash shell  
+  $ docker exec koushik uname -a  ---> shows os info without logging into container
+  $ docker exec koushik mkdir /tmp/ ---> creates an dir inside container in /tmp/ path without logging in.
+$ docker ps ---> shows the running container
+$ docker ps -a -----> shows all the containers
+
+##copy files##
+
+# docker cp filename containerid(or)name:/tmp/  ---> copies file from client to docker container
+# docker cp containerid:/tmp/filename .  ---> copies file inside container to localsystems pwd (.)
+
+##remove##
+stop the container before removing
+
+  $ docker stop containername
+  $ docker start containername
+  $ docker rm containername ----> delete the container
+  $ docker rmi imagename ---> delete the inage
+
+##LOGS FROM CONTAINER##
+
+  $ docker logs containername  ----> to view container logs 
+##docker usage ##
+  $ docker top containername ---> to see container cpu and mem usage
+
+  
+  
+  
+  
+  
+  
+
+  
