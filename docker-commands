@@ -70,6 +70,19 @@ stop the container before removing
 ##docker usage ##
   $ docker top containername ---> to see container cpu and mem usage
 
+##docker images##
+$ docker search imagename:tag
+$ docker pull imagename:tag
+$ docker push username/imagename:tag
+
+##docker port##
+$ docker run -itd --name koushik -p 600:80 nginx:latest -----> external port 600, container port 80
+$ docker inspect imagename  ---> to see all the image details and to check port number 
+
+## docker history ##
+
+$ docker history containername:tag    ---> to see all the actions happened in the container
+
   
   
   
